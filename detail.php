@@ -11,7 +11,7 @@
 			</div>
 			<div id="menu">
 				<ul>
-				<li><a href="home.html" title="HOME PAGE">HOME PAGE</a></li>
+				<li><a href="home.php" title="HOME PAGE">HOME PAGE</a></li>
 				<li><a href="introduce.html" title="INTRODUCE">INTRODUCE</a></li>
 				<li><a href="product.html" title="PRODUCT">PRODUCT</a></li>
 				<li><a href="news.html" title="NEWS">NEWS</a></li>
@@ -24,18 +24,38 @@
 		</div>
 		<div id="banner">
 			<img src="image/banner2.png" alt="DO CHOI" width="1000px" />
-		</div>
+		</div>'/=ơ'
 		<div id="detail">
+<?php
+		include 'dbconnector.php';
+		$productid =$_GET['productid'];
+		            $sql = "SELECT productid, image, price, productname FROM product  WHERE productid = '$productid'";
+		            $result = pg_query($connection,$sql);
+		            if (pg_num_rows($result) > 0) {
+		            // output data of each row
+		            while($row = pg_fetch_assoc($result)) {
+		            	$productid = $row['productid'];
+		              	$price = $row['price'];
+		              	$image = $row['image'];
+		              	$productname = $row['productname'];
+		         
+		          ?>
+			
+
 			<h1>Do choi 1</h1>
 				<div class="detailIMG col-5">
-					<img src="./image/dochoi1.jpg" width="300px" height="400px" />
+					<img src="<?= $image; ?>" width="300px" height="400px" />
 				</div>
 				<div class="col-5 detail">
 					<form>
 						<table>
 							<tr>
+								<th>Name: </th>
+								<td><?= $productname; ?></td>
+							</tr>
+							<tr>
 								<th>Price: </th>
-								<td>199$</td>
+								<td><?= $price; ?>$</td>
 							</tr>
 							<tr>
 								<th>Color:</th>
@@ -56,19 +76,10 @@
 						</table>
 					</form>
 				</div>
-				<div class="col-2">
-					<div class="col-12">
-						<a href="detail.html"><img src="./image/dochoi2.jpg" width="120px" /></a>
-						<h3>Do choi 1</h3>
-					</div>
-					<div class="col-12">
-						<a href="detail.html"><img src="./image/dochoi3.jpg" width="120px" /></a>
-						<h3>Do choi 1</h3>
-					</div>
-				</div>
-				<div class="buy col-12">
-					<input type="submit" value="Buy" onclick="window.location='payment.html';">
-				</div>
+				 <?php }} 
+
+		       ?>
+
 		</div>
 		<div id="footer">
 			<div class="row">
