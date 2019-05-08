@@ -7,15 +7,15 @@
 <body>
 		<div id="menu_top">
 			<div id="ATN">
-				<a href="home.html" title="HOME PAGE">ATN SHOP</a>
+				<a href="index.php" title="HOME PAGE">ATN SHOP</a>
 			</div>
 			<div id="menu">
 				<ul>
-				<li><a href="home.php" title="HOME PAGE">HOME PAGE</a></li>
-				<li><a href="introduce.html" title="INTRODUCE">INTRODUCE</a></li>
-				<li><a href="product.html" title="PRODUCT">PRODUCT</a></li>
-				<li><a href="news.html" title="NEWS">NEWS</a></li>
-				<li><a href="contact.html" title="CONTACT">CONTACT</a></li>	
+				<li><a href="index.php" title="HOME PAGE">HOME PAGE</a></li>
+				<li><a href="introduce.php" title="INTRODUCE">INTRODUCE</a></li>
+				<li><a href="product.php" title="PRODUCT">PRODUCT</a></li>
+				<li><a href="news.php" title="NEWS">NEWS</a></li>
+				<li><a href="contact.php" title="CONTACT">CONTACT</a></li>	
 			</ul>
 			</div>
 			<div id="help">
