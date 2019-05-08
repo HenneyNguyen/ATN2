@@ -42,7 +42,7 @@
 		         
 		          ?>
 				<a class="col-3" href="detail.php?productid=<?= $productid; ?>">
-					<img src="<?= $image; ?>"  width="220px" />
+					<img src="<?= $image; ?>"  width="220px" height="200px" />
 					<h3><?= $productname; ?></h3>
 				</a>
 				 <?php }} 
