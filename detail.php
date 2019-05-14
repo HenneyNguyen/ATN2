@@ -19,7 +19,7 @@
 			</ul>
 			</div>
 			<div id="help">
-				<a href="help.html" title="HELP">HELP</a>
+				<a href="help.php" title="HELP">HELP</a>
 			</div>
 		</div>
 		<div id="banner">
